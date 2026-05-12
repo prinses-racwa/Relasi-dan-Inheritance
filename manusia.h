@@ -1,6 +1,8 @@
 #ifndef MANUSIA_H
 #define MANUSIA_H
+#include <iostream>
 using namespace std;
+#include "jantung.h"
 
 class manusia {
 public:
