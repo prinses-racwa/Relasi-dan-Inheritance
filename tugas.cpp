@@ -20,3 +20,31 @@ public:
         return ++globalId;
     }
 };
+
+int user::globalId = 0;
+
+class member : public user {
+private:
+    bool status;
+
+public:
+    member(string pNama, string pEmail, bool pStatus)
+        : user(pNama, pEmail) {
+        status = pStatus;
+    }
+
+    void showProfile() {
+        cout << "ID     : " << id << endl;
+        cout << "Nama   : " << nama << endl;
+        cout << "Email  : " << email << endl;
+        cout << "Status : " << (status ? "Aktif" : "Nonaktif") << endl;
+    }
+
+    void setStatus(bool pStatus) {
+        status = pStatus;
+    }
+
+    bool getStatus() {
+        return status;
+    }
+};
