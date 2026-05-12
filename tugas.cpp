@@ -48,3 +48,21 @@ public:
         return status;
     }
 };
+
+class admin : public user {
+public:
+    admin(string pNama, string pEmail)
+        : user(pNama, pEmail) {
+    }
+
+    void showAllMember(member m1, member m2) {
+        cout << "\n=== DATA MEMBER ===" << endl;
+        m1.showProfile();
+        cout << endl;
+        m2.showProfile();
+    }
+
+    void toggleActivationMember(member &m) {
+        m.setStatus(!m.getStatus());
+    }
+};
