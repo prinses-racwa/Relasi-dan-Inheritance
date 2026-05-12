@@ -66,3 +66,19 @@ public:
         m.setStatus(!m.getStatus());
     }
 };
+
+int main() {
+    member member1("Andi", "andi@gmail.com", true);
+    member member2("Budi", "budi@gmail.com", false);
+
+    admin admin1("Admin", "admin@gmail.com");
+
+    admin1.showAllMember(member1, member2);
+
+    cout << "\nStatus member2 diubah\n" << endl;
+    admin1.toggleActivationMember(member2);
+
+    member2.showProfile();
+
+    return 0;
+}
